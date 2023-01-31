@@ -11,7 +11,7 @@ import api.ApiMethods;
 import static user.CreateUser.createUser;
 import static user.CreateUser.createUserWithWrongPassword;
 
-public class RegistrationTest extends driverConfig {
+public class RegistrationTest extends DriverConfig {
 
     CreateUser createUser = new CreateUser();
     CreateUser createUserWithWrongPassword = new CreateUser();

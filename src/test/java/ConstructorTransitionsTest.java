@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import pom.ConstructorTransitionsPage;
 
-public class ConstructorTransitionsTest extends driverConfig {
+public class ConstructorTransitionsTest extends DriverConfig {
 
     @Test
     @DisplayName("Тест перехода к разделу «Булки»")
@@ -12,7 +12,7 @@ public class ConstructorTransitionsTest extends driverConfig {
         ConstructorTransitionsPage constructorTransitionsPage = new ConstructorTransitionsPage(webDriver);
         constructorTransitionsPage.clickSauceSection();
         constructorTransitionsPage.clickBunSection();
-        Assert.assertEquals("Булки", constructorTransitionsPage.textFromActiveSection());
+        Assert.assertEquals("Булки", constructorTransitionsPage.textFromActiveBunSection());
     }
 
     @Test
@@ -20,7 +20,7 @@ public class ConstructorTransitionsTest extends driverConfig {
     public void saucesTransitionTest() {
         ConstructorTransitionsPage constructorTransitionsPage = new ConstructorTransitionsPage(webDriver);
         constructorTransitionsPage.clickSauceSection();
-        Assert.assertEquals("Соусы", constructorTransitionsPage.textFromActiveSection());
+        Assert.assertEquals("Соусы", constructorTransitionsPage.textFromActiveSauceSection());
     }
 
     @Test
@@ -28,6 +28,6 @@ public class ConstructorTransitionsTest extends driverConfig {
     public void toppingsTransitionTest() {
         ConstructorTransitionsPage constructorTransitionsPage = new ConstructorTransitionsPage(webDriver);
         constructorTransitionsPage.clickToppingSection();
-        Assert.assertEquals("Начинки", constructorTransitionsPage.textFromActiveSection());
+        Assert.assertEquals("Начинки", constructorTransitionsPage.textFromActiveToppingSection());
     }
 }

@@ -2,7 +2,7 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import pom.TransitionsPage;
 
-public class TransitionsTest extends driverConfig {
+public class TransitionsTest extends DriverConfig {
 
     @Test
     @DisplayName("Тест перехода из личного кабинета в конструктор по надписи конструктор")

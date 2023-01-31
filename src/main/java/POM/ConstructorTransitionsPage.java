@@ -1,6 +1,5 @@
 package pom;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -9,8 +8,11 @@ public class ConstructorTransitionsPage extends MainPage {
     private final By bunSection = By.xpath("//span[text()='Булки']");
     private final By sauceSection = By.xpath("//span[text()='Соусы']");
     private final By toppingSection = By.xpath("//span[text()='Начинки']");
-    private final By activeSection = By.xpath("//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class='text text_type_main-default']");
+    private final By activeBunSection = By.xpath("//div[contains(@class,'tab_tab_type_current__2BEPc')]/span[text()='Булки']");
 
+    private final By activeSauceSection = By.xpath("//div[contains(@class,'tab_tab_type_current__2BEPc')]/span[text()='Соусы']");
+
+    private final By activeToppingSection = By.xpath("//div[contains(@class,'tab_tab_type_current__2BEPc')]/span[text()='Начинки']");
     public ConstructorTransitionsPage(WebDriver driver) {
         super(driver);
     }
@@ -26,8 +28,15 @@ public class ConstructorTransitionsPage extends MainPage {
     public void clickToppingSection() {
         driver.findElement(toppingSection).click();
     }
+    public String textFromActiveBunSection() {
+        return driver.findElement(activeBunSection).getText();
+    }
 
-    public String textFromActiveSection() {
-        return driver.findElement(activeSection).getText();
+    public String textFromActiveSauceSection() {
+        return driver.findElement(activeSauceSection).getText();
+    }
+
+    public String textFromActiveToppingSection() {
+        return driver.findElement(activeToppingSection).getText();
     }
 }

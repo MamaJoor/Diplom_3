@@ -12,7 +12,7 @@ import java.time.Duration;
 
 import static user.CreateUser.createUser;
 
-public class LoginTest extends driverConfig {
+public class LoginTest extends DriverConfig {
     CreateUser createUser = new CreateUser();
     ApiMethods user = new ApiMethods();
     LoginPage loginPage;

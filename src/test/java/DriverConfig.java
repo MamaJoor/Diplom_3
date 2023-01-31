@@ -7,15 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class driverConfig{
+public abstract class DriverConfig {
 
     protected static WebDriver webDriver;
+    protected static String MAIN_URL = "https://stellarburgers.nomoreparties.site";
 
     @Before
     public void setup() {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
-        webDriver.get("http://stellarburgers.nomoreparties.site/");
+        webDriver.get(MAIN_URL);
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
